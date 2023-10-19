@@ -1,0 +1,1425 @@
+/*-----general-----*/
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+/*-----navbar-----*/
+nav {
+    width: 100%;
+    position: fixed;
+    transition: all 0.2s;
+    z-index: 1;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    nav{
+        background-color: #000;
+    }
+}
+.logo {
+    position: fixed;
+    height: 225px;
+    width: auto;
+    left: -65px;
+    display: flex;
+    align-items: center;
+    transform: translateY(-40.5%);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo{
+        left: -70px;
+        height: 200px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .logo{
+        display: none;
+    }
+}
+.logo img {
+    color: white;
+    max-height: 100%;
+    max-width: 100%;
+}  
+nav ul{
+    margin: 30px 10px 0 0;
+    height: 55px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    nav ul{
+        padding-top: 4px;
+    }
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    margin-right: 60px;
+    z-index: 1;
+}
+nav ul li a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #ff3c78;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    z-index: 1;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    left: 0;
+}
+nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+}
+@media(width: 1200px){
+    nav ul li a{
+        margin-right: 38px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    nav ul li a{
+        margin-right: 35px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul li a{
+        margin-right: 20px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    nav ul li a{
+        margin-right: 44.7px;
+    }
+}
+.navbar-scrolled{
+    background-color: #000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.30);
+    margin-top: 0;
+    height: 95px;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar-scrolled{
+        background-color: #000;
+        height: 85px;
+    }
+}
+/*--------header--------*/
+.main-poster img{
+    height: 88%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+@media(width: 1200px){
+    .main-poster img{
+        position: absolute;
+        width: 100%;
+        height: 90%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-poster{
+        position: absolute;
+        width: 100%;
+        height: 90%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-poster{
+        height: 100%;
+        width: 100%;
+        clip: rect(0px, auto, 24rem, 0px);
+        position: absolute;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .main-poster{
+        height: 100%;
+        width: 100%;
+        clip: rect(0px, auto, 19rem, 0px);
+        position: absolute;
+    }
+}
+.poster-illustration img{
+    width: auto;
+    height: 420px;
+    float: right;
+    margin-top: 85px;
+    margin-right: 48px;
+}
+@media(width: 1200px){
+    .poster-illustration img{
+        height: 375px;
+        margin-right: 35px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .poster-illustration img{
+        height: 330px;
+        margin-top: 80px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .poster-illustration img{
+        height: 300px;
+        margin-right: 40px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .poster-illustration img{
+        display: none;
+    }
+}
+.header-heading{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 10rem;
+    padding-left: 3rem;
+    font-size: 75px;
+}
+@media(width: 1200px){
+    .header-heading{
+        font-size: 52px;
+        padding-left: 2.5rem;
+        padding-top: 10.5rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-heading{
+        font-size: 35px;
+        padding-top: 11.5rem;
+        padding-left: 2rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-heading{
+        font-size: 28px;
+        padding-left: 20px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-heading{
+        font-size: 52px;
+        padding-left: 27px;
+        padding-top: 9rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .products-text{
+        padding-left: 7rem;
+    }
+}
+.hbutton{
+    margin-left: 3.2rem;
+    margin-top: -40px;
+}
+.header-button{
+  background-color: #ff3c78;
+  border-radius: 4px;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  min-height: 56px;
+  min-width: 120px;
+  padding: 16px 20px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+.header-button:hover{
+  background-color: #d53867;
+  transform: translateY(-2px);
+}
+@media(width: 1200px){
+    .header-button{
+        margin-left: -10px;
+        margin-top: 8px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-button{
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-button{
+        margin-top: 30px;
+        margin-left: -32px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-button{
+        display: none;
+    }
+}
+.hbutton2{
+    margin-left: 14.7rem;
+    margin-top: -55.2px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hbutton2{
+        margin-left: 13.5rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .hbutton2{
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .hbutton2{
+        display: none;
+    }
+}
+.header-button2{
+    height: 55px;
+    width: 9.2rem;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+}
+.header-button2:hover{
+    background-color: #ffffff43;
+    border: 1px solid #ff3c78;
+    color: #ff3c78;
+}
+/*---------article-area------------*/
+.description-box a{
+    text-decoration: none;
+    color: #000;
+}
+.description-box{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .description-box{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: auto;
+    }
+}
+.dbox{
+    overflow: hidden;
+    width: 20rem;
+    height: 12.5rem;
+    margin-top: -8px;
+    background-color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.dbox:hover{
+    cursor: pointer;
+}
+.grow{
+    transition: all .2s ease-in-out;
+}
+.grow:hover{
+    transform: scale(1.1);
+}
+@media (width: 1200px){
+    .dbox{
+        width: 17rem;
+        height: 10.5rem;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .dbox{
+        width: 14rem;
+        height: 17rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .dbox{
+        width: 10.8rem;
+        height: 14rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .dbox{
+        width: 33.5rem;
+        margin-top: 3rem;
+        margin-left: 1.2rem;
+        margin-right: auto;
+    }
+}
+.dbox img{
+    width: auto;
+    height: 100px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+@media(width: 1200px){
+    .dbox img{
+        height: 75px;
+        padding-top: 12px;
+        padding-left: 22px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .dbox img{
+        width: auto;
+        height: 65px;
+        padding-left: 15px;
+    }
+}
+.dbox h2{
+    padding-left: 20px;
+    margin-top: 10px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .dbox h2{
+        font-size: 18px;
+        padding-left: 21px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .dbox h2{
+        font-size: 14px;
+        padding-left: 14px;
+    }
+}
+.dbox p{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 16px;
+    margin-top: -15px;
+}
+@media(width: 1200px){
+    .dbox p{
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: -12px;
+    }
+}
+.womenDbox{
+    background-color: #f3f2f2;
+}
+.menDbox{
+    background-color: #e4d5f5;
+}
+/*-------------men-section----------------*/
+.men-section-heading{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5rem;
+    margin-left: 40.5rem;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+.men-section-heading::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff3c78;
+    width: 14.5rem;
+    position: absolute;
+    bottom: -15px;
+    left: -1;
+}
+@media(width: 1200px){
+    .men-section-heading{
+        margin-left: 31rem;
+        margin-top: 6rem;
+        font-size: 20px;
+    }
+}
+@media(width: 1200px){
+    .men-section-heading::before{
+        width: 11.7rem;
+        left: -2;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .men-section-heading{
+        margin-left: 24.2rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .men-section-heading::before{
+        left: -2;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .men-section-heading{
+        margin-left: 17rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .men-section-heading{
+        margin-left: 10.8rem;
+        margin-top: 3rem;
+    }
+}
+.men-outfit-section{
+    width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5rem;
+}
+.men-outfit-box{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    width: 20rem;
+    height: 27rem;
+    margin-top: -8px;
+    background-color: #f6f3f3;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+.men-outfit-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.men-outfit-box a{
+    text-decoration: none;
+}
+.men-outfit-box img{
+    width: auto;
+    height: 21rem;
+    margin-top: 20px;
+    margin-left: 2rem;
+}
+.blue-tshirt{
+    margin-left: 1.2rem !important;
+    margin-top: 23px !important;
+}
+.men-outfit-box h3{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+.men-outfit-box p{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14.5px;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    margin-top: -20px;
+}
+/*-------------women-section----------------*/
+.women-section-heading{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    margin-left: 38.8rem;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+.women-section-heading::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff3c78;
+    width: 18.9rem;
+    position: absolute;
+    bottom: -15px;
+    left: -1;
+}
+@media(width: 1200px){
+    .women-section-heading{
+        margin-left: 31rem;
+        margin-top: 2rem;
+        font-size: 20px;
+    }
+}
+@media(width: 1200px){
+    .women-section-heading::before{
+        width: 15.4rem;
+        left: -2;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .women-section-heading{
+        margin-left: 22.4rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .women-section-heading::before{
+        left: -2;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .women-section-heading{
+        margin-left: 15.5rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .women-section-heading{
+        margin-left: 8.9rem;
+        margin-top: 3rem;
+    }
+}
+.women-outfit-section{
+    width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5rem;
+}
+.women-outfit-box{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    width: 20rem;
+    height: 28rem;
+    margin-top: -8px;
+    background-color: #f6f3f3;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+.women-outfit-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.women-outfit-box a{
+    text-decoration: none;
+}
+.women-outfit-box img{
+    width: auto;
+    height: 22rem;
+    margin-top: 15px;
+    margin-left: 4.8rem;
+}
+.redDLtop{
+    margin-left: 2.1rem !important;
+}
+.purpleStop{
+    margin-left: 4.2rem !important;
+    margin-top: 15px !important;
+}
+.pinkVtop{
+    margin-left: 4rem !important;
+    margin-top: 15px !important;
+}
+.redKLtop{
+    margin-left: 5rem !important;
+    margin-top: 15px !important;
+}
+.Msuitwomens{
+    margin-left: 3.7rem !important;
+    margin-top: 15px !important;
+}
+.women-outfit-box h3{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+.women-outfit-box p{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14.5px;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    margin-top: -20px;
+}
+/*-------------men-footwear-section----------------*/
+.men-footwear-section-heading{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    margin-left: 38.9rem;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+.men-footwear-section-heading::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff3c78;
+    width: 17.5rem;
+    position: absolute;
+    bottom: -15px;
+    left: -1;
+}
+@media(width: 1200px){
+    .men-footwear-section-heading{
+        margin-left: 31rem;
+        margin-top: 2rem;
+        font-size: 20px;
+    }
+}
+@media(width: 1200px){
+    .men-footwear-section-heading::before{
+        width: 14.1rem;
+        left: -2;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .men-footwear-section-heading{
+        margin-left: 22.7rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .men-footwear-section-heading::before{
+        left: -2;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .men-footwear-section-heading{
+        margin-left: 15.5rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .men-footwear-section-heading{
+        margin-left: 9.5rem;
+        margin-top: 3rem;
+    }
+}
+.men-footwear-section{
+    width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5rem;
+}
+.men-footwear-box{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    width: 20rem;
+    height: 26rem;
+    margin-top: -8px;
+    background-color: #f6f3f3;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+.amazon-men-footwear-box{
+    height: 26.7rem;
+}
+.men-footwear-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.men-footwear-box a{
+    text-decoration: none;
+}
+.men-footwear-box img{
+    width: auto;
+    height: 20rem;
+    margin-top: 20px;
+    margin-left: 0.2rem;
+}
+.Burton{
+    margin-left: 1.2rem !important;
+    margin-top: 28px !important;
+    margin-bottom: -5px !important;
+}
+.SFR{
+    margin-left: 1.1rem !important;
+}
+.Layasa{
+    height: 17rem !important;
+    margin-left: 0.5rem !important;
+    margin-bottom: 1.7rem !important;
+    margin-top: 40px !important;
+}
+.Sparx{
+    height: 22.5rem !important;
+    margin-top: -7px !important;
+    margin-left: 2rem !important;
+}
+.Liberty{
+    height: 20.5rem !important;
+    margin-top: 12px !important;
+    margin-left: 6rem !important;
+    margin-bottom: 0.6rem !important;
+}
+.Krafter{
+    height: 21rem !important;
+    margin-left: 2.7rem !important;
+    margin-top: 12px !important;
+}
+.Ragnar{
+    height: 19.9rem !important;
+    margin-left: 3.6rem !important;
+    margin-bottom: 0.6rem !important;
+}
+.men-footwear-box h3{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+.men-footwear-box p{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14.5px;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    margin-top: -20px;
+}
+/*-------------women-footwear-section----------------*/
+.women-footwear-section-heading{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    margin-left: 37.5rem;
+    font-size: 24.5px;
+    font-weight: bold;
+    position: relative;
+}
+.women-footwear-section-heading::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff3c78;
+    width: 21.5rem;
+    position: absolute;
+    bottom: -15px;
+    left: -1;
+}
+@media(width: 1200px){
+    .women-footwear-section-heading{
+        margin-left: 29.2rem;
+        margin-top: 2rem;
+        font-size: 20px;
+    }
+}
+@media(width: 1200px){
+    .women-footwear-section-heading::before{
+        width: 17.5rem;
+        left: -2;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .women-footwear-section-heading{
+        margin-left: 21rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .women-footwear-section-heading::before{
+        left: -2;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .women-footwear-section-heading{
+        margin-left: 14.2rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .women-footwear-section-heading{
+        margin-left: 7.5rem;
+        margin-top: 3rem;
+    }
+}
+.women-footwear-section{
+    width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5rem;
+}
+.women-footwear-box{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    width: 20rem;
+    height: 25.5rem;
+    margin-top: -8px;
+    background-color: #f6f3f3;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+.women-footwear-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.women-footwear-box a{
+    text-decoration: none;
+}
+.women-footwear-box img{
+    width: auto;
+    height: 20rem;
+    margin-top: 10px;
+    margin-left: 2.5rem;
+}
+.heighten{
+    margin-left: 1.2rem !important;
+    margin-top: 12px !important;
+}
+.TWIN-TOES{
+    margin-left: 2rem !important;
+    margin-top: 12px !important;
+}
+.SHOEBUCKS{
+    margin-left: 3.2rem !important;
+    margin-top: 12px !important;
+}
+.FLITE{
+    margin-left: 2.1rem !important;
+}
+.Rocia{
+    margin-left: 1.5rem !important;
+}
+.Step-store{
+    margin-left: 1.8rem !important;
+}
+.women-footwear-box h3{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+.women-footwear-box p{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14.5px;
+    padding-left: 1.7rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    margin-top: -20px;
+}
+/*---------------section-contact----------------*/
+#Contact{
+    background-color: #f6f3f3;
+    width: 100%;
+    height: 80vh;
+    margin-top: 2rem;
+}
+.contact-heading{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    margin-left: 41.3rem;
+    padding-top: 0.5rem;
+    font-size: 24.5px;
+    font-weight: bold;
+    position: relative;
+}
+.contact-heading::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff3c78;
+    width: 13.4rem;
+    position: absolute;
+    bottom: -15px;
+    left: -1;
+}
+@media(width: 1200px){
+    .contact-heading{
+        margin-left: 32.1rem;
+        margin-top: 2rem;
+        font-size: 20px;
+    }
+}
+@media(width: 1200px){
+    .contact-heading::before{
+        width: 11.1rem;
+        left: -2;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-heading{
+        margin-left: 24.5rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-heading{
+        margin-left: 17.2rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-heading{
+        margin-left: 11.5rem;
+        margin-top: 3rem;
+    }
+}
+.contact-box-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-box{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.5rem;
+    width: 29rem;
+    height: 22rem;
+    background-color: #ffffff;
+}
+@media(width: 1200px){
+    .contact-box{
+        width: 23rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-box{
+        width: 19rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-box{
+        width: 14.8rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-box{
+        width: 11.2rem;
+    }
+}
+.contact-box::after{
+    content: "";
+    display: block;
+    height: 5px;
+    background: #ff3c78;
+    width: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -21.2rem;
+    z-index: 1;
+}
+@media(width: 1200px){
+    .contact-box::after{
+        margin-top: -21.2rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-box::after{
+        margin-top: -21.2rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-box::after{
+        margin-top: -19.9rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-box::after{
+        margin-top: -20.4rem;
+    }
+}
+.contact-box-line::after{
+    background: #27cc8d;
+    margin-top: -20.9rem;
+    z-index: 1;
+}
+@media(width: 1200px){
+    .contact-box-line::after{
+        margin-top: -20.9rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-box-line::after{
+        margin-top: -21.1rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-box-line::after{
+        margin-top: -21rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-box-line::after{
+        margin-top: -21.3rem;
+    }
+}
+.amazon-contact-box-line::after{
+    margin-top: -20.8rem;
+}
+@media(width: 1200px){
+    .amazon-contact-box-line::after{
+        margin-top: -21.1rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .amazon-contact-box-line::after{
+        margin-top: -21rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .amazon-contact-box-line::after{
+        margin-top: -19.9rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .amazon-contact-box-line::after{
+        margin-top: -20.3rem;
+    }
+}
+.contact-box img{
+    z-index: -1;
+    width: auto;
+    height: 170px;
+    padding-left: 9rem;
+}
+@media(width: 1200px){
+    .contact-box img{
+        height: 150px;
+        padding-left: 7rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-box img{
+        height: 140px;
+        padding-left: 5.3rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-box img{
+        height: 120px;
+        margin-top: 0.3rem;
+        padding-left: 3.6rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-box img{
+        height: 110px;
+        margin-top: 0.4rem;
+        padding-left: 2.1rem;
+    }
+}
+.our-contact-logo{
+    height: 115px !important;
+    margin-top: 30px !important;
+    padding-left: 11rem !important;
+}
+@media(width: 1200px){
+    .our-contact-logo{
+        height: 95px !important;
+        padding-left: 8.7rem !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .our-contact-logo{
+        height: 88px !important;
+        padding-left: 6.9rem !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .our-contact-logo{
+        height: 74px !important;
+        padding-left: 5.2rem !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .our-contact-logo{
+        height: 64px !important;
+        padding-left: 3.7rem !important;
+    }
+}
+.amazon-logo{
+    height: 100px !important;
+    margin-top: 37.8px !important;
+    padding-left: 11.4rem !important;
+}
+@media(width: 1200px){
+    .amazon-logo{
+        height: 88px !important;
+        padding-left: 8.8rem !important;
+        margin-top: 35px !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .amazon-logo{
+        height: 77px !important;
+        padding-left: 7.2rem !important;
+        margin-top: 33.5px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .amazon-logo{
+        height: 65px !important;
+        padding-left: 5.5rem !important;
+        margin-top: 33px !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .amazon-logo{
+        height: 55px !important;
+        padding-left: 3.9rem !important;
+        margin-top: 34px !important;
+    }
+}
+.contact-box p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 25px;
+    padding-right: 30px;
+    padding-top: -30px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-box p{
+        font-size: 15px;
+        padding-top: -35px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-box p{
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.our-contact-paragraph{
+    padding-top: 20px !important;
+}
+.amazon-contact-paragraph{
+    padding-top: 26px !important;
+}
+.contact-box a{
+    text-decoration: none;
+}
+.contact-button{
+  appearance: none;
+  background-color: #FFFFFF;
+  border: solid #000000;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin-left: 9.4rem;
+  margin-top: -0.2rem;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  z-index: 0;
+}
+.contact-button:before{
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+.contact-button:hover:before{
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+.contact-button:after{
+  background-color: #FFFFFF;
+}
+.contact-button span{
+  z-index: 1;
+  position: relative;
+}
+@media(width: 1200px){
+    .contact-button{
+        margin-left: 6.6rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-button{
+        margin-left: 4.5rem;
+        height: 3rem;
+        padding-top: 1.2em;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-button{
+        margin-left: 2.4rem;
+        height: 2rem;
+        padding-top: 0.7em;
+        margin-top: 0.5rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact-button{
+        margin-left: 0.79rem;
+        height: 2rem;
+        padding-top: 0.6em;
+        margin-top: 0.4rem;
+    }
+}
+/*---------------------footer-------------------------*/
+#About{
+    font-family: sans-serif;
+}
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    padding-top: 40px;
+    width: 100%;
+    color: white;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer h3{
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 3rem;
+    margin-top: -8px;
+}
+.footer p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 20px;
+    font-size: 14px;
+    color: #cacdd2;
+    margin-top: -13px;
+}
+.footer-social-icons{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 42px;
+}
+.footer-social-icons li{
+    margin: 0 10px;
+}
+.footer-social-icons li a img{
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    width: 2.7rem;
+}
+.footer-menu{
+    margin-bottom: 20px;
+    margin-right: 33px;
+}
+.footer-menu ul{
+    display: flex;
+}
+.footer-menu ul li{
+    padding-right: 10px;
+    display: block;
+}
+.footer-menu ul li a{
+    color: #cfd2d6;
+    border: 1.3px solid white;
+    padding: 6px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.footer-menu ul li a:hover{
+    color: #000;
+    background-color: #EBEBEB;
+}
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-right: 1.1rem;
+    text-align: center;
+}
+.footer-bottom p{
+    text-align: center;
+    font-size: 14px;
+    word-spacing: 2px;
+    padding-top: 18px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+    color: #EBEBEB;
+    font-size: 16px;
+    padding-top: 18px;
+    text-decoration: none;
+}
+@media(max-width:500px){
+    .footer-menu ul{
+        display: inline;
+    }
+    .footer-menu ul li{
+        margin-bottom: 20px;
+    }
+}
